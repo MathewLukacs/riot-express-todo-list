@@ -1,8 +1,9 @@
+# .travis.yml file
 language: node_js
 node_js:
- 
+
   - "12"
- 
+  
 services: mongodb  
 cache:  
   directories:
@@ -10,10 +11,3 @@ cache:
 install:
   - npm install
 script:
-
-deploy:
-  - provider: script
-    skip_cleanup: true
-    script: chmod +x ./deploy.sh && ./deploy.sh
-    on:
-      branch: master
